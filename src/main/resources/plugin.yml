@@ -1,10 +1,10 @@
 main: cx.ajneb97.Codex
 version: 1.15.2
 name: Codex
-api-version: 1.13
+api-version: 1.21
 author: Ajneb97
 softdepend: [WorldGuard,WorldEdit,PlaceholderAPI,MythicMobs]
 
 commands:
-  codex:
+  zone:
     description: Main command of Codex

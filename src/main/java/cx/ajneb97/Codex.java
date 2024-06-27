@@ -105,17 +105,22 @@ public class Codex extends JavaPlugin {
 	}
 
 	public void setVersion(){
-		String packageName = Bukkit.getServer().getClass().getPackage().getName();
-		String bukkitVersion = Bukkit.getServer().getBukkitVersion();
+		//String packageName = Bukkit.getServer().getClass().getPackage().getName();
+		//String bukkitVersion = Bukkit.getServer().getBukkitVersion();
+
+		serverVersion = ServerVersion.v1_20_R4; // I don't care, just use the latest version supported by the plugin :skull:
+
+		/*
 		if(bukkitVersion.contains("1.20.5") || bukkitVersion.contains("1.20.6")){
 			serverVersion = ServerVersion.v1_20_R4;
 		}else{
 			serverVersion = ServerVersion.valueOf(packageName.replace("org.bukkit.craftbukkit.", ""));
 		}
+		*/
 	}
 
 	public void registerCommands(){
-		this.getCommand("codex").setExecutor(new Comando(this));
+		this.getCommand("zone").setExecutor(new Comando(this));
 	}
 	
 	public void registerEvents(){

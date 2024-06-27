@@ -10,6 +10,8 @@ import org.bukkit.configuration.file.FileConfiguration;
 public class UtilidadesOtros {
 
 	public static boolean esLegacy() {
+		//Yup. 1.21 Isn't legacy, at all!
+		/*
 		if(Bukkit.getVersion().contains("1.13") || Bukkit.getVersion().contains("1.14") ||
 				Bukkit.getVersion().contains("1.15") || Bukkit.getVersion().contains("1.16")
 				 || Bukkit.getVersion().contains("1.17") || Bukkit.getVersion().contains("1.18")
@@ -18,9 +20,15 @@ public class UtilidadesOtros {
 		}else {
 			return true;
 		}
+
+		 */
+
+		return false;
 	}
 	
 	public static boolean esNew() {
+		// I don't care.. It's just... NEW!
+		/*
 		if(Bukkit.getVersion().contains("1.16") || Bukkit.getVersion().contains("1.17")
 				|| Bukkit.getVersion().contains("1.18") || Bukkit.getVersion().contains("1.19")
 				|| Bukkit.getVersion().contains("1.20")) {
@@ -28,6 +36,9 @@ public class UtilidadesOtros {
 		}else {
 			return false;
 		}
+		 */
+
+		return true;
 	}
 	
 	public static String discoveriesToText(List<String> discoveries) {
