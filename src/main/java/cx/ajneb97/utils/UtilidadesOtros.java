@@ -3,6 +3,7 @@ package cx.ajneb97.utils;
 import java.util.ArrayList;
 import java.util.List;
 
+import cx.ajneb97.Codex;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 
@@ -10,35 +11,19 @@ import org.bukkit.configuration.file.FileConfiguration;
 public class UtilidadesOtros {
 
 	public static boolean esLegacy() {
-		//Yup. 1.21 Isn't legacy, at all!
-		/*
-		if(Bukkit.getVersion().contains("1.13") || Bukkit.getVersion().contains("1.14") ||
-				Bukkit.getVersion().contains("1.15") || Bukkit.getVersion().contains("1.16")
-				 || Bukkit.getVersion().contains("1.17") || Bukkit.getVersion().contains("1.18")
-				 || Bukkit.getVersion().contains("1.19") || Bukkit.getVersion().contains("1.20")) {
-			return false;
-		}else {
-			return true;
-		}
-
-		 */
-
-		return false;
-	}
-	
-	public static boolean esNew() {
-		// I don't care.. It's just... NEW!
-		/*
-		if(Bukkit.getVersion().contains("1.16") || Bukkit.getVersion().contains("1.17")
-				|| Bukkit.getVersion().contains("1.18") || Bukkit.getVersion().contains("1.19")
-				|| Bukkit.getVersion().contains("1.20")) {
-			return true;
-		}else {
+		ServerVersion serverVersion = Codex.serverVersion;
+		if(serverVersion.serverVersionGreaterEqualThan(serverVersion,ServerVersion.v1_13_R1)) {
 			return false;
 		}
-		 */
-
 		return true;
+	}
+
+	public static boolean esNew() {
+		ServerVersion serverVersion = Codex.serverVersion;
+		if(serverVersion.serverVersionGreaterEqualThan(serverVersion,ServerVersion.v1_16_R1)){
+			return true;
+		}
+		return false;
 	}
 	
 	public static String discoveriesToText(List<String> discoveries) {
