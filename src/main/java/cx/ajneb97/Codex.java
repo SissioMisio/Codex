@@ -95,7 +95,7 @@ public class Codex extends JavaPlugin {
         Bukkit.getConsoleSender().sendMessage(prefix+MessagesManager.getColoredMessage("&eHas been disabled! &fVersion: "+version));
     }
     public void registerCommands(){
-        this.getCommand("codex").setExecutor(new MainCommand(this));
+        this.getCommand("zone").setExecutor(new MainCommand(this));
     }
 
     public void registerEvents(){
